@@ -1,33 +1,43 @@
 package tetris;
 
-import figures.*;
+import figures.Figure;
+import figures.RandomFigureFactory;
 import tetris.gui.ActionEvent;
 import tetris.gui.GUI;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Game {
     private GUI gui;
     private FigureController figureController;
     private Figure activeFigure;
     private Field field;
+    private Scoring scoring;
 
     public Game(int width, int height, GUI gui) {
         this.gui = gui;
         figureController = new FigureController(this);
         //this.gui.setActionHandler(figureController);
         field = new Field(width, height);
+        scoring = new Scoring();
+    }
+
+    public void onFigureMoved() {
+        updateGUI();
     }
 
     public void figureLanded() {
         field.addBlocks(activeFigure.getBlocks());
-        field.removeFullRows();
+        int numRemovedRows = field.removeFullRows();
         createFigure();
+        scoring.updateScore(numRemovedRows);
+        scoring.updateHighScore();
     }
 
     public Field getField() {
         return field;
+    }
+
+    public Scoring getScoring() {
+        return scoring;
     }
 
     public Figure getActiveFigure() {
@@ -36,6 +46,15 @@ public class Game {
 
     private void start() {
         createFigure();
+        figureController.start();
+    }
+
+    public void stop() {
+        gui.setActionHandler(null);
+        activeFigure = null;
+        field.removeAllBlocks();
+        scoring.reset();
+        figureController.stopControllerThread();
     }
 
     private void createFigure() {
@@ -73,7 +92,6 @@ public class Game {
             else if(e == ActionEvent.DROP) {
                 figureController.drop();
             }
-            updateGUI();
         }
     }
 
@@ -82,12 +100,10 @@ public class Game {
         if(activeFigure != null) {
             activeFigure.draw(gui);
         }
-        gui.drawBlocks(field.getBlocks());
-    }
 
-    public void stop() {
-        gui.setActionHandler(null);
-        activeFigure = null;
-        field.removeAllBlocks();
+        gui.drawBlocks(field.getBlocks());
+        gui.setLevel(scoring.getLevel());
+        gui.setScore(scoring.getScore());
+        gui.setHighScore(scoring.getHighScore());
     }
 }

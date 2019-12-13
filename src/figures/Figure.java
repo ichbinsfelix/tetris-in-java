@@ -51,4 +51,6 @@ public class Figure {
             offset.rotateClockwise();
         }
     }
+
+
 }

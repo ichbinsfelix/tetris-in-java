@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="785ba44d-5263-4460-9cc4-76c800d3328f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tetris/Scoring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tetris/tetris/FigureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tetris/tetris/FigureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tetris/tetris/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tetris/tetris/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figures/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tetris/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tetris/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tetris/FigureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tetris/FigureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tetris/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tetris/Game.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="152" />
+    <option name="myElementSize" value="174" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,13 +100,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Tetris$Tetris.ic" NAME="Tetris Coverage Results" MODIFIED="1573746835775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Tetris$Tetris.ic" NAME="Tetris Coverage Results" MODIFIED="1575364397357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

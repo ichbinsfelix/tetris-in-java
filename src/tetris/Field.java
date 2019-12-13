@@ -14,13 +14,13 @@ public class Field extends Object {
     public Field(int width, int height) {
         this.height = height;
         this.width = width;
-/*
-        for(int row = 3; row >= 0; row--) {
-            for(int col = 0; col < width-1; col++) {
-                blocks.add(new Block(col, row, 1));
-            }
-        }
-        */
+
+        //for(int row = 3; row >= 0; row--) {
+            //for(int col = 0; col < width-1; col++) {
+          //      blocks.add(new Block(col, row, 1));
+        //    }
+      //  }
+
     }
 
     public int getHeight() {
